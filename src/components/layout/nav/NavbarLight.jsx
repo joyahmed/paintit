@@ -14,8 +14,8 @@ const NavbarLight = ({
   mounted,
   view,
   windowHeight,
-  roofer,
-  rooferDark,
+  paintIt,
+  paintItDark,
 }) => {
   const router = useRouter();
 
@@ -36,8 +36,8 @@ const NavbarLight = ({
           <NavLogo
             {...{
               router,
-              roofer,
-              rooferDark,
+              paintIt,
+              paintItDark,
               currentTheme,
               windowHeight,
             }}

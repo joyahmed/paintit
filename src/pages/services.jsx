@@ -33,7 +33,7 @@ const Services = () => {
       >
         <Head>
           <title>Paintit-Services</title>
-          <meta name="description" content="Web app for roofer companies" />
+          <meta name="description" content="Web app for paintIt companies" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <PageBackground
@@ -54,7 +54,7 @@ const Services = () => {
             transition={{ duration: 1, delay: 1 }}
             className="flex w-screen flex-col items-center justify-center rounded-md px-8 pt-10 dark:bg-primary sm:px-0"
           >
-            <p className="font-medium w-full text-[18px] leading-[32px] dark:text-white sm:w-2/3 md:whitespace-pre md:text-center">
+            <p className="w-full text-[18px] font-medium leading-[32px] dark:text-white sm:w-2/3 md:whitespace-pre md:text-center">
               {text}
             </p>
           </m.div>

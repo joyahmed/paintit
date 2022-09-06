@@ -1,16 +1,22 @@
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
-import { close, logoPinkBlue, logoWhite, logoYellowCyan, menu } from "../../../assets";
+import {
+  close,
+  logoPinkBlue,
+  logoWhite,
+  logoYellowCyan,
+  menu,
+} from "../../../assets";
 import { navLinks } from "../../../constants";
-import { RooferContext } from "../../../store/RooferContext";
+import { PaintitContext } from "../../../store/PaintitContext";
 import DesktopMenu from "./DesktopMenu";
 import NavLogo from "./NavLogo";
 import PhoneMenu from "./PhoneMenu";
 import SocialMedia from "./SocialMedia";
 
 const Navbar = () => {
-  const { user, windowWidth } = useContext(RooferContext);
+  const { user, windowWidth } = useContext(PaintitContext);
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [windowHeight, setWindowHeigth] = useState("");

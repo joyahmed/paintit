@@ -1,4 +1,4 @@
-import { RooferProvider } from "@/src/store/RooferContext";
+import { PaintitProvider } from "@/src/store/PaintitContext";
 import { domAnimation, LazyMotion } from "framer-motion";
 import { ThemeProvider } from "next-themes";
 import Layout from "../components/layout/Layout";
@@ -10,13 +10,13 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
     <SessionProvider>
       <ThemeProvider enaleSystem={true} defaultTheme="dark" attribute="class">
-        <RooferProvider>
+        <PaintitProvider>
           <LazyMotion features={domAnimation} strict>
             <Layout>
               <Component {...pageProps} />
             </Layout>
           </LazyMotion>
-        </RooferProvider>
+        </PaintitProvider>
       </ThemeProvider>
     </SessionProvider>
   );

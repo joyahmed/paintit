@@ -1,7 +1,7 @@
 import styles from '@/src/styles';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
-import { rooferServices } from '../../../constants';
+import { paintItServices } from '../../../constants';
 import Input from '../Input';
 import Label from '../Label';
 
@@ -111,7 +111,7 @@ const QuoteForm = ({ isOpen, setIsOpen }) => {
 							value={data.email}
 							name='email'
 							onChange={handleChange}
-							placeholder='joy@roofer.com'
+							placeholder='joy@paintIt.com'
 						/>
 						<Label text='Email' />
 					</div>
@@ -187,7 +187,7 @@ const QuoteForm = ({ isOpen, setIsOpen }) => {
 							onChange={handleChange}
 						>
 							<option>Select</option>
-							{rooferServices.map(service => (
+							{paintItServices.map(service => (
 								<option key={service.title}>{service.title}</option>
 							))}
 						</select>

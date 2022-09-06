@@ -152,7 +152,7 @@ export const pathVariant = {
   },
 };
 
-export const moveRoofer = {
+export const movePaintit = {
   hidden: {
     x: 0,
     y: 0,

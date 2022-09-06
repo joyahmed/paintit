@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { close, menu, roofer, rooferBlack, rooferDark } from "../../../assets";
+import { close, menu, paintIt, paintItBlack, paintItDark } from "../../../assets";
 import NavItem from "./NavItem";
 
 const PhoneMenu = ({

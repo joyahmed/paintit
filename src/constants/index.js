@@ -343,7 +343,7 @@ export const aboutStaffs = [
   "We offer you free estimates",
 ];
 
-export const rooferTeam = [
+export const paintItTeam = [
   {
     id: 1,
     name: "Tom Jones",

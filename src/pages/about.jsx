@@ -16,11 +16,11 @@ import TeamMembers from "../components/TeamMembers";
 import TickMark from "../components/TickMark";
 import Button from "../components/ui/Button";
 import { awards } from "../constants";
-import { RooferContext } from "../store/RooferContext";
+import { PaintitContext } from "../store/PaintitContext";
 import styles from "../styles";
 
 const Features = () => {
-  const { windowHeight } = useContext(RooferContext);
+  const { windowHeight } = useContext(PaintitContext);
   const [animate, setAnimate] = useState(false);
   const [element, controls] = useScroll();
   const { systemTheme, theme, setTheme } = useTheme();
@@ -44,7 +44,7 @@ const Features = () => {
       >
         <Head>
           <title>PaintIt-About</title>
-          <meta name="description" content="Web app for roofer companies" />
+          <meta name="description" content="Web app for paintIt companies" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <PageBackground
@@ -212,7 +212,7 @@ const Phone = () => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       // stroke='currentColor'
-      className="rooferColor h-7 w-7"
+      className="paintItColor h-7 w-7"
     >
       <path
         strokeLinecap="round"

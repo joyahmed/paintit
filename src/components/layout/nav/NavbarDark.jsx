@@ -13,8 +13,8 @@ const NavbarDark = ({
 	mounted,
 	view,
 	windowHeight,
-	roofer,
-	rooferDark
+	paintIt,
+	paintItDark
 }) => {
 	return (
 		<nav
@@ -31,8 +31,8 @@ const NavbarDark = ({
 			<div className='flex items-center justify-between w-site'>
 				<NavLogo
 					{...{
-						roofer,
-						rooferDark,
+						paintIt,
+						paintItDark,
 						currentTheme,
 						windowHeight
 					}}

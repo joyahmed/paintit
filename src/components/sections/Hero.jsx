@@ -2,7 +2,7 @@ import { useScroll } from "@/src/components/useScroll";
 import { m } from "framer-motion";
 import { useTheme } from "next-themes";
 import { useContext, useEffect, useState } from "react";
-import { RooferContext } from "../../store/RooferContext";
+import { PaintitContext } from "../../store/PaintitContext";
 import styles from "../../styles";
 import { heroImage, heroText } from "../../utils/Animations";
 import GetStarted from "../GetStarted";
@@ -11,9 +11,9 @@ import Slider from "../Slider";
 import YoutubeButton from "../YoutubeButton";
 
 const Hero = () => {
-  const { windowHeight } = useContext(RooferContext);
+  const { windowHeight } = useContext(PaintitContext);
   const [element, controls] = useScroll();
-  const [showRoofer, setShowRoofer] = useState(true);
+  const [showPaintit, setShowPaintit] = useState(true);
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -25,10 +25,10 @@ const Hero = () => {
   }, []);
 
   useEffect(() => {
-    const handleRoofer = setTimeout(() => {
-      setShowRoofer(false);
+    const handlePaintit = setTimeout(() => {
+      setShowPaintit(false);
     }, 3000);
-    return () => handleRoofer;
+    return () => handlePaintit;
   }, []);
 
   return (
@@ -52,7 +52,7 @@ const Hero = () => {
             : "bg-hero-office bg-blend-multiply"
         } `}
       >
-        {showRoofer && windowHeight <= 500 ? (
+        {showPaintit && windowHeight <= 500 ? (
           <div className={`${styles.flexCenter} h-screen w-screen`}>
             <PaintAnimation path="home" />
           </div>

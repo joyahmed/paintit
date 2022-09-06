@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import { RooferContext } from "../../store/RooferContext";
+import { PaintitContext } from "../../store/PaintitContext";
 
 const PageBackground = ({ background, text1, text2 }) => {
-  const { windowHeight } = useContext(RooferContext);
+  const { windowHeight } = useContext(PaintitContext);
   const [animate, setAnimate] = useState(false);
   useEffect(() => {
     setTimeout(() => setAnimate(true), 500);

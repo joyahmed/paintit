@@ -1,10 +1,10 @@
-import { rooferTeam } from "@/src/constants";
+import { paintItTeam } from "@/src/constants";
 import Image from "next/image";
 import React from "react";
 import styles from "../styles";
 
-const text = `Roofer's Highly Efficient Team`;
-const text1 = `Meet Roofer's\nExpert Team Members`;
+const text = `Paintit's Highly Efficient Team`;
+const text1 = `Meet Paintit's\nExpert Team Members`;
 
 const TeamMembers = () => {
   return (
@@ -19,7 +19,7 @@ const TeamMembers = () => {
         </h2>
       </div>
       <div className="w-site flex h-full flex-col items-center justify-center space-x-0 space-y-5 px-4 sm:flex-row sm:space-x-6 sm:space-y-0">
-        {rooferTeam.map((member, index) => (
+        {paintItTeam.map((member, index) => (
           <div
             key={index}
             className="hover:rouned-[12px] group group flex h-[37rem] w-full flex-col items-end justify-end overflow-hidden rounded-[10px] px-2 shadow-2xl sm:h-[27rem] xl:h-[35rem]"

@@ -1,5 +1,5 @@
 import { useScroll } from "@/src/components/useScroll";
-import { RooferContext } from "@/src/store/RooferContext";
+import { PaintitContext } from "@/src/store/PaintitContext";
 import { m } from "framer-motion";
 import { useContext } from "react";
 import CountUp from "react-countup";
@@ -9,14 +9,13 @@ import { quote, sectionRight, statsAnimation } from "../utils/Animations";
 import { stats } from "../constants";
 
 const Stats = () => {
-  const { windowHeight, currentTheme } = useContext(RooferContext);
+  const { windowHeight, currentTheme } = useContext(PaintitContext);
   const [element, controls] = useScroll();
 
   return (
     <section
       ref={element}
       className={`my-10 flex min-h-screen w-screen items-center justify-center  `}
-
     >
       <m.div
         ref={element}

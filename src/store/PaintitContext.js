@@ -6,9 +6,9 @@ import { createContext, useEffect, useState } from "react";
 
 import { useTheme } from "next-themes";
 
-const RooferContext = createContext();
+const PaintitContext = createContext();
 
-const RooferProvider = ({ children }) => {
+const PaintitProvider = ({ children }) => {
   const [windowHeight, setWindowHeigth] = useState("");
   const [windowDimensions, setWindowDimensions] = useState({
     windowWidth: "",
@@ -78,7 +78,7 @@ const RooferProvider = ({ children }) => {
   }, []);
 
   return (
-    <RooferContext.Provider
+    <PaintitContext.Provider
       value={{
         user,
         signOut,
@@ -86,12 +86,12 @@ const RooferProvider = ({ children }) => {
         windowHeight: windowHeight,
         currentTheme,
         mousePosition,
-        touchPosition
+        touchPosition,
       }}
     >
       {children}
-    </RooferContext.Provider>
+    </PaintitContext.Provider>
   );
 };
 
-export { RooferProvider, RooferContext };
+export { PaintitProvider, PaintitContext };

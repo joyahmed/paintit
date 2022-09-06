@@ -2,7 +2,7 @@ import styles from "@/src/styles";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { rooferServices } from "../../../constants";
+import { paintItServices } from "../../../constants";
 import Input from "../Input";
 import Label from "../Label";
 import Select from "../Select";
@@ -70,7 +70,7 @@ const QuoteForm = ({ isOpen, setIsOpen }) => {
     }
   };
 
-  const marginBottom = rooferServices.length * 1.5;
+  const marginBottom = paintItServices.length * 1.5;
 
   return (
     <div
@@ -118,7 +118,7 @@ const QuoteForm = ({ isOpen, setIsOpen }) => {
               value={data.email}
               name="email"
               onChange={handleChange}
-              placeholder="joy@roofer.com"
+              placeholder="joy@paintIt.com"
             />
             <Label text="Email" />
           </div>
@@ -126,7 +126,7 @@ const QuoteForm = ({ isOpen, setIsOpen }) => {
         <div className="flex w-full items-center justify-start">
           <Select
             {...{
-              services: rooferServices,
+              services: paintItServices,
               handleSelect,
               openSelect,
               setOpenSelect,

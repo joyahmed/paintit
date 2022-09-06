@@ -26,7 +26,7 @@ const NavLogo = ({
           }`}
           width={`${windowHeight > 50 ? 70 : 80}`}
           height={`${windowHeight > 50 ? 70 : 80}`}
-          alt="roofer"
+          alt="paintIt"
           loading="lazy"
           objectFit="contain"
           className="z-[7] transition-all duration-200 ease-in-out group-hover:scale-[106%]"

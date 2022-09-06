@@ -37,8 +37,11 @@ const Home = () => {
       className="screen snap no-scrollbar flex min-h-screen flex-col items-center justify-center overflow-y-scroll dark:text-gray-200"
     >
       <Head>
-        <title>Painto</title>
-        <meta name="description" content="Web app for commerical painting companies" />
+        <title>PaintIt</title>
+        <meta
+          name="description"
+          content="Web app for commerical painting companies"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

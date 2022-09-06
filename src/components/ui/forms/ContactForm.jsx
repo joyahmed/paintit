@@ -3,7 +3,6 @@ import { toast } from "react-toastify";
 import Input from "../Input";
 import Label from "../Label";
 
-
 const initialState = {
   name: "",
   email: "",
@@ -12,7 +11,7 @@ const initialState = {
   message: "",
 };
 
-const QuoteForm = ({mounted, currentTheme}) => {
+const QuoteForm = ({ mounted, currentTheme }) => {
   const [{ name, email, phone, address, message }, setState] =
     useState(initialState);
 
@@ -70,7 +69,7 @@ const QuoteForm = ({mounted, currentTheme}) => {
             value={email}
             name="email"
             onChange={handleChange}
-            placeholder="joy@roofer.com"
+            placeholder="joy@paintIt.com"
             className="bg-transparent"
           />
           <Label text="Email" />
@@ -111,7 +110,11 @@ const QuoteForm = ({mounted, currentTheme}) => {
         </div>
         <div className="flex w-full items-center justify-center">
           <button
-            className={`${mounted && currentTheme === 'dark' ? 'bg-blue-gradient' : 'button-gradient'} w-1/2 rounded-md px-4 py-1.5 text-lg font-semibold text-white ${
+            className={`${
+              mounted && currentTheme === "dark"
+                ? "bg-blue-gradient"
+                : "button-gradient"
+            } w-1/2 rounded-md px-4 py-1.5 text-lg font-semibold text-white ${
               disabled && "cursor-not-allowed bg-opacity-50"
             }`}
             onClick={handleSubmit}

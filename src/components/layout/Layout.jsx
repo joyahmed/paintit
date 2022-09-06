@@ -5,14 +5,14 @@ import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { RooferContext } from "../../store/RooferContext";
+import { PaintitContext } from "../../store/PaintitContext";
 import ScrollView from "../ScrollView";
 import Footer from "./Footer";
 import Navbar from "./nav/Navbar";
 import Sidebar from "./Sidebar";
 
-const Layout = ({ children, title = "Roofer" }) => {
-  const { user, mousePosition, touchPosition } = useContext(RooferContext);
+const Layout = ({ children, title = "Paintit" }) => {
+  const { user, mousePosition, touchPosition } = useContext(PaintitContext);
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
   const router = useRouter();
@@ -60,7 +60,11 @@ const Layout = ({ children, title = "Roofer" }) => {
       ) : (
         <div className="flex min-h-screen flex-col items-center justify-between">
           <div className="flex flex-col items-center justify-center sm:mt-0">
-            <m.div variants={big} animate="show" className="cursor  ease-in-out"></m.div>
+            <m.div
+              variants={big}
+              animate="show"
+              className="cursor  ease-in-out"
+            ></m.div>
             <m.div
               variants={small}
               animate="show"

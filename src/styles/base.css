@@ -20,7 +20,7 @@
     .w-site {
       @apply w-full ss:max-w-[1000px] sm:max-w-[1100px] md:max-w-[1200px] xl:max-w-[1700px];
     }
-    .roofer-theme {
+    .paintIt-theme {
       @apply bg-blue-300 bg-opacity-70 dark:bg-primary dark:bg-opacity-[75%];
     }
 
@@ -29,7 +29,7 @@
     }
 
     .card-light {
-      @apply hover:bg-gradient-to-l hover:from-themeDarker hover:via-themeDark hover:to-themeLight hover:text-white shadow-lg;
+      @apply shadow-lg hover:bg-gradient-to-l hover:from-themeDarker hover:via-themeDark hover:to-themeLight hover:text-white;
     }
 
     .button-gradient {

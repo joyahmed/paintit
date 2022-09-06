@@ -40,7 +40,7 @@ const Features = () => {
         className={`relative flex min-h-screen w-screen flex-col  items-start justify-center`}
       >
         <PageBackground
-          {...{ background: "bg-contact", text1: "About", text2: "Roofer" }}
+          {...{ background: "bg-contact", text1: "About", text2: "Paintit" }}
         />
         <m.div
           ref={element}
@@ -58,7 +58,7 @@ const Features = () => {
             className={`mb-20 text-[50px] font-bold tracking-wider`}
           >
             {/* <HeadingComponent
-              {...{ mounted, currentTheme, text1: "About", text2: "Roofer" }}
+              {...{ mounted, currentTheme, text1: "About", text2: "Paintit" }}
             /> */}
           </m.h1>
 
@@ -131,7 +131,7 @@ const Phone = () => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       // stroke='currentColor'
-      className="rooferColor h-7 w-7"
+      className="paintItColor h-7 w-7"
     >
       <path
         strokeLinecap="round"
