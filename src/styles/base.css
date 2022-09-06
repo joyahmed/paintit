@@ -10,10 +10,10 @@
     @apply scroll-smooth;
   }
   cursor {
-    @apply h-5 w-5 rounded-full bg-blue-100;
+    @apply h-5 w-5 rounded-full bg-blue-50;
   }
   body {
-    @apply min-h-screen overflow-hidden overflow-y-auto scroll-smooth bg-[ghostwhite] font-poppins text-gray-700 dark:bg-primary;
+    @apply min-h-screen overflow-hidden overflow-y-auto scroll-smooth bg-blue-100 font-poppins text-gray-700 dark:bg-primary;
   }
 
   @layer components {
@@ -25,11 +25,11 @@
     }
 
     .heading-gradient-light {
-      @apply bg-gradient-to-r from-themeDarkest via-blue-700 to-blue-500 bg-clip-text font-extrabold text-transparent;
+      @apply bg-gradient-to-r from-themeDarkest via-blue-700 to-blue-600 bg-clip-text font-extrabold text-transparent;
     }
 
     .card-light {
-      @apply hover:bg-gradient-to-r hover:from-themeDarker hover:via-themeDark hover:to-themeLight hover:text-white;
+      @apply hover:bg-gradient-to-l hover:from-themeDarker hover:via-themeDark hover:to-themeLight hover:text-white shadow-lg;
     }
 
     .button-gradient {

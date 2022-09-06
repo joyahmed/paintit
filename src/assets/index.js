@@ -11,34 +11,25 @@ const send = "/Send.svg";
 const shield = "/Shield.svg";
 const star = "/Star.svg";
 const close = "/close.svg";
-const apple = "/apple.svg";
 const arrowUp = "/arrow-up.svg";
-const discount = "/discount.svg";
 const facebook = "/social-icons/facebook.svg";
 const twitter = "/social-icons/twitter.svg";
 const people01 = "/people01.png";
 const people02 = "/people02.png";
 const people03 = "/people03.png";
-const robot = "/robot.png";
 const heroBg = "/hero-bg.jpg";
-const services = "/roofer-services.jpg";
-const drilling = "/drilling.jpg";
-const leaked = "/leaked.jpg";
-const uplifted = "/uplifted.jpg";
-const damaged = "/damaged.jpg";
-const puncturesHoles = "/punctures-holes.jpg";
-const shrinkage = "/shrinkage.jpg";
-const roofIcon = "/services/roof-icon.svg";
-const roofDamage = "/services/roof-damage.svg";
-const roofLeakMan = "/services/roof-leak-man.svg";
-const roofLeak = "/services/roof-leak.svg";
+const colorProof = "/services/color-proof.svg";
+const faux = "/services/faux.svg";
+const prePaint = "/services/pre-paint.svg";
+const removal = "/services/removal.svg";
+const waterProofing = "/services/water-proofing.svg";
+const windowWashing = "/services/window-washing.svg";
+const girlPainter = "/services/girl-painter.jpg";
+const paintBrush = "/services/paint-brush.jpg";
 const googleIcon = "/auth/google.svg";
 const phoneIcon = "/phone.svg";
 const repairingOne = "/repairing/repairing-1.jpg";
 const adminIcon = "/admin-icon.svg";
-const gutterReplaceInstall = "/services/gutter-replacement-installation.jpg";
-const replacementSiding = "/services/replacement-siding.jpg";
-const residentialRoofing = "/services/residential-roofing.jpg";
 const contactImage = "/bg/contact.jpg";
 const customer = "/stats/customer.jpg";
 const company = "/stats/company.jpg";
@@ -64,20 +55,18 @@ const heroSlide1 = "/slider/hero/hero-slider-1.jpg";
 const heroSlide2 = "/slider/hero/hero-slider-2.jpg";
 const heroSlide3 = "/slider/hero/hero-slider-3.jpg";
 const heroSlide4 = "/slider/hero/hero-slider-4.jpg";
+const brushBg = '/bg/brush-bg.jpg'
 export {
   logoWhite,
   logoGradient,
   quotes,
-  robot,
   send,
   shield,
   star,
   menu,
   close,
   google,
-  apple,
   arrowUp,
-  discount,
   facebook,
   instagram,
   linkedin,
@@ -86,24 +75,16 @@ export {
   people02,
   people03,
   heroBg,
-  services,
-  drilling,
-  leaked,
-  uplifted,
-  damaged,
-  puncturesHoles,
-  shrinkage,
-  roofIcon,
-  roofDamage,
-  roofLeakMan,
-  roofLeak,
+  colorProof,
+  faux,
+  prePaint,
+  removal,
+  waterProofing,
+  windowWashing,
   googleIcon,
   phoneIcon,
   repairingOne,
   adminIcon,
-  gutterReplaceInstall,
-  replacementSiding,
-  residentialRoofing,
   contactImage,
   customer,
   company,
@@ -130,5 +111,8 @@ export {
   heroSlide3,
   heroSlide4,
   logoPinkBlue,
-  logoYellowCyan
+  logoYellowCyan,
+  paintBrush,
+  girlPainter,
+  brushBg
 };

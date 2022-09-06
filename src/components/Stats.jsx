@@ -3,6 +3,7 @@ import { RooferContext } from "@/src/store/RooferContext";
 import { m } from "framer-motion";
 import { useContext } from "react";
 import CountUp from "react-countup";
+import { brushBg } from "../assets";
 import { quote, sectionRight, statsAnimation } from "../utils/Animations";
 
 import { stats } from "../constants";
@@ -14,14 +15,15 @@ const Stats = () => {
   return (
     <section
       ref={element}
-      className={`w-site my-10 flex min-h-screen items-center justify-center`}
+      className={`my-10 flex min-h-screen w-screen items-center justify-center  `}
+
     >
       <m.div
         ref={element}
         initial="hidden"
         variants={sectionRight}
         animate={controls}
-        className="w-site relative flex min-h-screen items-center justify-center sm:flex-row md:justify-between"
+        className="w-site relative flex min-h-screen items-center justify-center  sm:flex-row md:justify-between"
       >
         {/* <Animation /> */}
         <div className="flex h-full w-screen flex-col items-center justify-center px-4 sm:flex-row sm:space-x-6">

@@ -1,7 +1,7 @@
 import { useScroll } from "@/src/components/useScroll";
 import { m } from "framer-motion";
 import Image from "next/image";
-import { drilling, services } from "../../assets";
+import { paintBrush, girlPainter } from "../../assets";
 import styles, { layout } from "../../styles";
 import {
   sectionRight,
@@ -38,8 +38,8 @@ const ServicesSection = () => {
         >
           <div className="ease group absolute -top-36 right-20 z-[5] rotate-12 opacity-70 transition-all duration-200 hover:rotate-0 sm:top-20 xl:top-48 xl:right-60 ">
             <Image
-              src={drilling}
-              alt="service-drilling"
+              src={paintBrush}
+              alt="paint-brush"
               width={200}
               height={300}
               className="rounded-md opacity-50 group-hover:opacity-100"
@@ -54,8 +54,8 @@ const ServicesSection = () => {
             className="relative h-[22rem] w-[22rem] sm:h-[20rem] sm:w-[25rem]"
           >
             <Image
-              src={services}
-              alt="service-drilling"
+              src={girlPainter}
+              alt="girl-painter"
               // width={350}
               // height={250}
               layout="fill"
@@ -80,8 +80,7 @@ const ServicesSection = () => {
           className={`${layout.sectionInfo} mt-[5rem] px-4 sm:mt-0 sm:px-0`}
         >
           <h2 className={`${styles.heading2}`}>
-            Damaged roof is <br className="hidden sm:block" /> no longer your
-            problem
+            Looking to get <br className="hidden sm:block" /> your home repainted
           </h2>
           <p className={`${styles.paragraph} mt-5 max-w-[470px]`}>
             Elit enim sed massa etiam. Mauris eu adipiscing ultrices ametodio

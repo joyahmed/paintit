@@ -35,15 +35,15 @@ const PaintAnimation = ({ path }) => {
   return (
     <div
       ref={element}
-      className={`absolute mt-14 flex h-screen w-screen items-center justify-center`}
+      className={`absolute`}
     >
       {/* <div className="flex h-[500px] w-[500px] items-center justify-center rounded-full bg-cyan-900 bg-opacity-30 shadow-2xl"> */}
         <m.svg
           variants={svgVariant}
           initial="hidden"
           animate="visible"
-          width={400}
-          height={400}
+          width={`${path !== 'footer' ? 400 : 150}`}
+          height={`${path !== 'footer' ? 400 : 150}`}
           viewBox="0 0 802 560"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

@@ -7,7 +7,7 @@ import YoutubeButton from "./YoutubeButton";
 const Banner = () => {
   return (
     <div
-      className={`${styles.flexCenter} bg-left-center bg-trust my-5 mb-10 min-h-[33rem] w-screen flex-col bg-gray-900 bg-opacity-70 bg-cover bg-fixed bg-no-repeat bg-blend-hard-light dark:bg-opacity-90 dark:bg-blend-multiply sm:flex-row`}
+      className={`${styles.flexCenter} bg-left-center my-5 mb-10 min-h-[33rem] w-screen flex-col bg-red-900 bg-opacity-50 bg-banner bg-cover bg-fixed bg-no-repeat bg-blend-hard-light dark:bg-opacity-50 dark:bg-blend-multiply sm:flex-row`}
     >
       <div className={`${styles.flexCenter} w-[80%] flex-col sm:flex-row`}>
         <div

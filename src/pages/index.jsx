@@ -38,20 +38,13 @@ const Home = () => {
     >
       <Head>
         <title>Painto</title>
-        <meta name="description" content="Web app for roofer companies" />
+        <meta name="description" content="Web app for commerical painting companies" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Hero />
 
-      <Divider />
-
-      {/* <div className="flex flex-col items-center justify-center space-y-20 sm:hidden">
-        <GetStarted path="home" />
-        <VideoSection path="home" />
-        <YoutubeButton />
-        <Divider />
-      </div> */}
+      {/* <Divider /> */}
 
       <Stats />
 

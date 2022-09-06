@@ -72,7 +72,7 @@ const Slider = () => {
                 className={`absolute flex h-full w-screen ${
                   autoScroll && "animate-slider"
                 } items-center justify-center
-              bg-gray-900 bg-opacity-70 bg-blend-hard-light duration-1000 ease-in-out dark:bg-opacity-70 dark:bg-blend-multiply
+              dark:bg-gray-900 bg-red-900 bg-blend-multiply bg-opacity-50  duration-1000 ease-in-out dark:bg-opacity-50 dark:bg-blend-multiply
                `}
                 style={{
                   backgroundImage: `url(${slide.image})`,
@@ -163,7 +163,7 @@ const ContentLeft = ({ slide, currentTheme }) => {
                 className={`${
                   currentTheme === "dark"
                     ? "bg-primary bg-opacity-80"
-                    : "bg-themeDarkest bg-opacity-80"
+                    : "bg-themeDarkest"
                 } z-[15] flex cursor-pointer items-center justify-center rounded-md px-7 py-4 text-sm font-bold tracking-widest text-white transition-all duration-300 hover:scale-105`}
               >
                 Discover More

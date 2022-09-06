@@ -24,9 +24,9 @@ const Footer = () => {
         <div className="mr-10 flex flex-[1] flex-col justify-start">
           <div
             ref={element}
-            className="relative -ml-3 flex h-40 items-start justify-start "
+            className="relative flex h-32 items-start justify-start "
           >
-            <PaintAnimation />
+            <PaintAnimation path="footer" />
           </div>
 
           <p className={`${styles.paragraph} mt-4 max-w-[312px]`}>
@@ -70,8 +70,8 @@ const Footer = () => {
         transition={{ duration: 1, delay: 2 }}
         className="w-site flex flex-col items-center justify-between border-t-[1px] border-t-blue-400 pt-6 md:flex-row"
       >
-        <p className="text-center text-[18px] font-semibold leading-[27px] text-themeDarkest dark:text-white">
-          Copyright Ⓒ 2022 Roofer. All Rights Reserved.
+        <p className="text-center text-[18px] font-semibold leading-[27px] text-themeDarkest dark:text-white tracking-wider">
+          Copyright Ⓒ 2022 PaintIt. All Rights Reserved.
         </p>
         <SocialMedia />
       </m.div>

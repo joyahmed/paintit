@@ -1,5 +1,5 @@
 import { useScroll } from "@/src/components/useScroll";
-import { rooferServices } from "@/src/constants";
+import { paintitServices } from "@/src/constants";
 import styles from "@/src/styles";
 import { m } from "framer-motion";
 import { useTheme } from "next-themes";
@@ -37,12 +37,10 @@ const ServicesItems = ({ path }) => {
         transition={{ duration: 1 }}
         className="w-site flex flex-wrap"
       >
-        {rooferServices.map((item) => (
+        {paintitServices.map((item) => (
           <div
             key={item.title}
-            className={`${styles.flexCenter} w-full flex-col sm:w-1/2 ${
-              path == "page" && " "
-            }`}
+            className={`${styles.flexCenter} w-full flex-col sm:w-1/2 `}
           >
             <m.div
               ref={element}

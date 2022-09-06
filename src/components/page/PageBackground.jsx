@@ -10,7 +10,7 @@ const PageBackground = ({ background, text1, text2 }) => {
 
   return (
     <div
-      className={`flex  min-h-[20rem] w-screen items-center justify-center bg-gray-400 ${background} bg-cover bg-center bg-no-repeat text-white`}
+      className={`flex min-h-[20rem] w-screen items-center justify-center bg-gray-400 ${background} bg-gray-900 bg-cover bg-center bg-no-repeat text-white bg-blend-multiply`}
     >
       <h1
         className={`mb-5 h-full text-[27px] font-bold tracking-wider sm:text-[50px]`}

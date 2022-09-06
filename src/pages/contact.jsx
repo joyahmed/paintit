@@ -8,15 +8,8 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
-import { contactImage } from "../assets";
 import Divider from "../components/Divider";
 import PageBackground from "../components/page/PageBackground";
-import {
-  contactFormAnimation,
-  contactImageDance,
-  pageInfo,
-  sectionRight,
-} from "../utils/Animations";
 
 const Contact = () => {
   const [element, controls] = useScroll();
@@ -27,7 +20,7 @@ const Contact = () => {
   const NoSsrMap = useMemo(
     () =>
       dynamic(() => import("../components/MapComponent"), {
-        loading: () => <p>A map is loading</p>,
+        loading: () => <p>Loading</p>,
         ssr: false,
       }),
     []
@@ -45,17 +38,17 @@ const Contact = () => {
         className={`relative min-h-screen w-screen flex-wrap items-start justify-center`}
       >
         <Head>
-          <title>Roofer-Contact</title>
-          <meta name="description" content="Web app for roofer companies" />
+          <title>PaintIt-Contact</title>
+          <meta name="description" content="Web app for Paintit companies" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <PageBackground
           {...{
-            background: "bg-contact",
+            background: "bg-header",
             mounted,
             currentTheme,
             text1: "Contact",
-            text2: "Roofer",
+            text2: "PaintIt",
           }}
         />
 
@@ -67,10 +60,10 @@ const Contact = () => {
                 className={`flex h-[10rem] w-full flex-col items-center justify-between rounded-md py-5 shadow-xl sm:w-1/3 ${
                   index === contactItems?.length - 1
                     ? "border-opacity-0"
-                    : "border-blue-400 border-opacity-40 dark:border-blue-400 dark:border-opacity-40 sm:border-r-2"
+                    : "border-blue-400 border-opacity-40 dark:border-blue-400 dark:border-opacity-40 sm:border-r-[1px]"
                 }`}
               >
-                <div className="transitoin-all flex h-12 w-12 items-center justify-center rounded-full bg-themeDarker duration-300 ease-in-out hover:scale-110 dark:bg-gray-800 dark:bg-opacity-50">
+                <div className="transitoin-all flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-themeDarker duration-300 ease-in-out hover:scale-110 dark:bg-gray-800 dark:bg-opacity-50">
                   <Image
                     src={item.icon}
                     alt={item.name}
@@ -79,7 +72,7 @@ const Contact = () => {
                     className=""
                   />
                 </div>
-                <div className="flex flex-col items-center justify-center">
+                <div className="heading-gradient-light flex flex-col items-center justify-center text-[15px] font-semibold tracking-wide dark:text-white">
                   <span>{item.one}</span>
                   <span>{item.two}</span>
                 </div>

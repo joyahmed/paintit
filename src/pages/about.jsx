@@ -43,17 +43,17 @@ const Features = () => {
         className={`relative flex w-screen flex-col items-start justify-center overflow-hidden sm:h-auto `}
       >
         <Head>
-          <title>Roofer-About</title>
+          <title>PaintIt-About</title>
           <meta name="description" content="Web app for roofer companies" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <PageBackground
           {...{
-            background: "bg-contact",
+            background: "bg-header",
             mounted,
             currentTheme,
             text1: "About",
-            text2: "Roofer",
+            text2: "PaintIt",
           }}
         />
         <m.div
@@ -98,7 +98,7 @@ const Features = () => {
                 className="leading-1 text-[15px] md:w-full"
               >
                 <h1 className={`${styles.heading2} mb-3`}>
-                  Roofer - exceptional roofing services
+                  PaintIt - exceptional painting services
                 </h1>
                 <p className="text-sm leading-6 dark:text-white">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.

@@ -4,12 +4,14 @@ import {
   award2,
   award3,
   award4,
+  colorProof,
   company,
   customer,
   damaged,
   demarini,
   email,
   facebook,
+  faux,
   gutterReplaceInstall,
   heroSlide1,
   heroSlide2,
@@ -24,7 +26,9 @@ import {
   people03,
   phone,
   pin,
+  prePaint,
   puncturesHoles,
+  removal,
   replacementSiding,
   residentialRoofing,
   roofDamage,
@@ -42,6 +46,8 @@ import {
   transaction,
   twitter,
   uplifted,
+  waterProofing,
+  windowWashing,
 } from "../assets";
 
 export let navLinks = [
@@ -154,36 +160,30 @@ export const feedback = [
   },
 ];
 
-export const rooferServices = [
+export const paintitServices = [
   {
-    title: "Leaks",
-    description: `Leaks are the most common roofing problems that people encounter. Leaking on the roof is normally caused by a variety of issues. For instance, accumulation of leaves on the roof can trigger moisture-related damages which end up causing leaks. Faulty installation and the age of the roof can also trigger leaks.`,
-    img: leaked,
-    icon: roofLeak,
+    title: "Faux Finishes",
+    icon: faux,
   },
   {
-    title: "Uplifted Roofing Material",
-    description: `Uplifting of roofing materials is also a common type of roof damage and one of the primary reasons why homeowners seek roofing repairs. This type of damage is commonly caused by elements of weather like strong winds. Strong winds can cause misplacement of tiles and shingles hence causing leaks and paving the way for pests and insects to enter your home through the roof.`,
-    img: uplifted,
-    icon: roofDamage,
+    title: "Water Proofing",
+    icon: waterProofing,
   },
   {
-    title: "Damaged Roofing Materials",
-    description: `Another common kind of roof damage is missing materials. When the roof misses materials like shingles and coverings, it leads to a lot of issues like leaks. Missing roofing materials is the easiest kind of roof damage to detect or identify.
-
-		For instance, if the shingles dropped inside your house or around your compound, you could come across them and identify the damage.
-
-		Note that missing shingles is an indication that your home is prone to water damage, especially during the rainy season. Damages to roofing materials caused by age and other factors are also very common.`,
-    img: damaged,
-    icon: roofIcon,
+    title: "Pre-Paint Demo",
+    icon: prePaint,
   },
   {
-    title: "Punctures and Holes",
-    description: `Punctures and holes are also very common types of roof damage. They may seem trivial, but they can cause a wide range of issues. For instance, holes on the roof can cause leaks and allow pests and insects into your home.
-
-		Such damages can be caused by pests like woodpeckers or contractors walking over shingles when building. It can also come as a result of rotting caused by moisture on the roof.`,
-    img: puncturesHoles,
-    icon: roofLeakMan,
+    title: "Mildew Removal",
+    icon: removal,
+  },
+  {
+    title: "Color Proof",
+    icon: colorProof,
+  },
+  {
+    title: "Window Washing",
+    icon: windowWashing,
   },
 ];
 
@@ -315,7 +315,12 @@ export const clients = [
 
 export const contactItems = [
   { name: phone, icon: phone, one: "+1-416-555-0130", two: "613 555 0154" },
-  { name: email, icon: email, one: "info@roofer.com", two: "help@roofer.com" },
+  {
+    name: email,
+    icon: email,
+    one: "info@paintit.com",
+    two: "help@paintit.com",
+  },
   {
     name: pin,
     icon: pin,
