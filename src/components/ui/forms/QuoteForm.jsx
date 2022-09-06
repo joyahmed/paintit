@@ -2,7 +2,7 @@ import styles from "@/src/styles";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { paintItServices } from "../../../constants";
+import { paintitServices } from "../../../constants";
 import Input from "../Input";
 import Label from "../Label";
 import Select from "../Select";
@@ -70,7 +70,7 @@ const QuoteForm = ({ isOpen, setIsOpen }) => {
     }
   };
 
-  const marginBottom = paintItServices.length * 1.5;
+  const marginBottom = paintitServices.length * 1.5;
 
   return (
     <div
@@ -126,7 +126,7 @@ const QuoteForm = ({ isOpen, setIsOpen }) => {
         <div className="flex w-full items-center justify-start">
           <Select
             {...{
-              services: paintItServices,
+              services: paintitServices,
               handleSelect,
               openSelect,
               setOpenSelect,
