@@ -49,7 +49,7 @@ const Hero = () => {
         } min-h-screen  w-screen flex-col bg-cover bg-center bg-blend-multiply sm:flex-row ${
           mounted && currentTheme === "dark"
             ? "bg-hero-dark bg-blend-multiply"
-            : "bg-hero-office bg-blend-multiply"
+            : "bg-hero-light bg-blend-multiply"
         } `}
       >
         {showPaintit && windowHeight <= 500 ? (
