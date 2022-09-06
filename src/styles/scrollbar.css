@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* width */
+  ::-webkit-scrollbar {
+    @apply h-2.5 w-[7px] rounded-md;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply hover:bg-themeLight z-[5] rounded-md bg-themeDark shadow-sm dark:bg-gray-600 dark:hover:bg-gray-800;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply cursor-pointer;
+  }
+
+  ::-webkit-scrollbar-corner {
+    @apply opacity-0;
+  }
+}

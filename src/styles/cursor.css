@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .cursor {
+    @apply pointer-events-none fixed top-0 left-0 z-10 h-7 w-7  rounded-full border-[2px] border-blue-900 border-opacity-10 bg-primary bg-opacity-10  dark:border-blue-400 dark:border-opacity-50;
+  }
+  .cursor-small {
+    @apply bg-blue-400 pointer-events-none fixed top-0 left-0 z-10 h-2 w-2 rounded-full  dark:bg-blue-400;
+  }
+}
+
+.cursor-dot,
+.cursor-dot-outline {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #dc5656;
+}
+
+.cursor-dot-outline {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(229, 128, 128, 0.5);
+}
+
+.progress-bar {
+  position: fixed;
+  top: 40px;
+  left: 100px;
+  right: 0;
+  height: 10px;
+  background: red;
+  transform-origin: 0%;
+}

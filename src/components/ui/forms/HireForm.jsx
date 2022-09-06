@@ -1,0 +1,212 @@
+import styles from '@/src/styles';
+import { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
+import { rooferServices } from '../../../constants';
+import Input from '../Input';
+import Label from '../Label';
+
+const QuoteForm = ({ isOpen, setIsOpen }) => {
+	const [data, setData] = useState({
+		firstName: '',
+		lastName: '',
+		mobile: '',
+		email: '',
+		addressLine1: '',
+		addressLine2: '',
+		city: '',
+		state: '',
+		zip: '',
+		country: '',
+		service: ''
+	});
+	const [disabled, setDisabled] = useState(false);
+
+	// useEffect(() => {
+	// 	data.firstName &&
+	// 		data.lastName &&
+	// 		data.mobile &&
+	// 		data.email &&
+	// 		data.addressLine1 &&
+	// 		data.city &&
+	// 		data.zip &&
+	// 		data.country &&
+	// 		data.service &&
+	// 		setDisabled(false);
+	// }, [data]);
+
+	const handleChange = e => {
+		const { name, value } = e.target;
+		setData(prev => {
+			return { ...prev, [name]: value };
+		});
+	};
+
+	const handleSubmit = e => {
+		e.preventDefault();
+		const hireData = {
+			firstName: data.firstName,
+			lastName: data.lastName,
+			mobile: data.mobile,
+			email: data.email,
+			addressLine1: data.addressLine1,
+			addressLine2: data.addressLine2,
+			city: data.city,
+			state: data.state,
+			zip: data.zip,
+			country: data.country,
+			service: data.service
+		};
+
+		toast.dark(
+			`A quation for Service:
+		  \n'${hireData.service}'
+		  \n is sent to ${hireData.email}`
+		);
+
+		setIsOpen(!isOpen);
+	};
+
+	return (
+		<div className='flex items-center justify-center text-white'>
+			<form
+				encType='multipart/form-data'
+				className='w-full space-y-7 my-5'
+			>
+				<div className='flex w-full items-center justify-start space-x-2'>
+					<div className='relative w-1/2'>
+						<Input
+							type='text'
+							value={data.firstName}
+							name='firstName'
+							onChange={handleChange}
+							placeholder='joy'
+						/>
+						<Label text='First Name' />
+					</div>
+					<div className='relative w-1/2'>
+						<Input
+							type='text'
+							name='lastName'
+							value={data.lastName}
+							onChange={handleChange}
+							placeholder='ahmed'
+						/>
+						<Label text='Last Name' />
+					</div>
+				</div>
+				<div className='flex w-full items-center justify-start space-x-2 my-3'>
+					<div className='relative w-1/2'>
+						<Input
+							type='text'
+							value={data.mobile}
+							name='mobile'
+							onChange={handleChange}
+							placeholder='+110'
+						/>
+						<Label text='Phone' />
+					</div>
+					<div className='relative w-1/2'>
+						<Input
+							type='text'
+							value={data.email}
+							name='email'
+							onChange={handleChange}
+							placeholder='joy@roofer.com'
+						/>
+						<Label text='Email' />
+					</div>
+				</div>
+				<div className='relative flex w-full items-center justify-start space-x-2 my-3'>
+					<Input
+						type='text'
+						value={data.addressLine1}
+						name='addressLine1'
+						onChange={handleChange}
+						placeholder='address line 1'
+					/>
+					<Label text='Apt, House, Street' />
+				</div>
+				<div className='relative flex w-full items-center justify-start space-x-2'>
+					<Input
+						type='text'
+						value={data.addressLine2}
+						name='addressLine2'
+						onChange={handleChange}
+						placeholder='address line 2'
+					/>
+					<Label text='Area' />
+				</div>
+				<div className='flex w-full items-center justify-start space-x-2 my-2'>
+					<div className='relative'>
+						<Input
+							type='text'
+							value={data.city}
+							name='city'
+							onChange={handleChange}
+							placeholder='london'
+						/>
+						<Label text='City' />
+					</div>
+					<div className='relative'>
+						<Input
+							type='text'
+							value={data.state}
+							name='state'
+							onChange={handleChange}
+							placeholder='london'
+						/>
+						<Label text='State' />
+					</div>
+					<div className='relative'>
+						<Input
+							type='text'
+							value={data.zip}
+							name='zip'
+							onChange={handleChange}
+							placeholder='123'
+						/>
+						<Label text='Zip' />
+					</div>
+					<div className='relative'>
+						<Input
+							type='text'
+							value={data.country}
+							name='country'
+							onChange={handleChange}
+							placeholder='bangladesh'
+						/>
+						<Label text='Country' />
+					</div>
+				</div>
+				<div className='flex w-full items-center justify-start space-x-2 my-'>
+					<div className='relative w-1/3'>
+						<select
+							name='service'
+							value={data.service}
+							className='w-full px-4 h-9 rounded-lg shadow-lg focus:outline-none'
+							onChange={handleChange}
+						>
+							<option>Select</option>
+							{rooferServices.map(service => (
+								<option key={service.title}>{service.title}</option>
+							))}
+						</select>
+						<Label text='Service' />
+					</div>
+				</div>
+				<div className='flex w-full items-center justify-center'>
+					<button
+						className={`bg-blue-gradient w-1/2 sm:w-auto px-4 py-2 rounded-md text-white text-sm font-semibold ${
+							disabled && 'cursor-not-allowed bg-opacity-50'
+						}`}
+						onClick={handleSubmit}
+					>
+						Submit
+					</button>
+				</div>
+			</form>
+		</div>
+	);
+};
+
+export default QuoteForm;

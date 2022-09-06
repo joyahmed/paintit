@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  cursor {
+    @apply h-5 w-5 rounded-full bg-blue-100;
+  }
+  body {
+    @apply min-h-screen overflow-hidden overflow-y-auto scroll-smooth bg-[ghostwhite] font-poppins text-gray-700 dark:bg-primary;
+  }
+
+  @layer components {
+    .w-site {
+      @apply w-full ss:max-w-[1000px] sm:max-w-[1100px] md:max-w-[1200px] xl:max-w-[1700px];
+    }
+    .roofer-theme {
+      @apply bg-blue-300 bg-opacity-70 dark:bg-primary dark:bg-opacity-[75%];
+    }
+
+    .heading-gradient-light {
+      @apply bg-gradient-to-r from-themeDarkest via-blue-700 to-blue-500 bg-clip-text font-extrabold text-transparent;
+    }
+
+    .card-light {
+      @apply hover:bg-gradient-to-r hover:from-themeDarker hover:via-themeDark hover:to-themeLight hover:text-white;
+    }
+
+    .button-gradient {
+      @apply bg-gradient-to-r from-themeDarker via-themeDark to-themeLight;
+    }
+
+    .button-gradient-dark {
+      @apply bg-gradient-to-r from-themeDarkest via-themeDarker to-themeDark;
+    }
+
+    .sidebar-icon {
+      @apply relative mx-auto mt-2 mb-2 flex h-9 w-9 cursor-pointer items-center justify-center rounded-3xl bg-[#ADD8E6] bg-opacity-40 shadow-2xl transition-all duration-300 ease-linear hover:rounded-xl hover:bg-[#55c2c3] hover:text-white dark:bg-green-600 dark:hover:bg-green-700 sm:h-12 sm:w-12;
+    }
+
+    .active {
+      @apply bg-gray-300 text-blue-400 hover:bg-[#3772ff] dark:bg-green-800 dark:hover:bg-green-900;
+    }
+
+    .sidebar-tooltip {
+      @apply absolute left-16 z-40 m-2 w-auto min-w-max origin-left scale-0 rounded-md bg-[#3772ff] bg-opacity-80 p-2 text-xs font-bold text-white shadow-md transition-all duration-100 dark:bg-green-700;
+    }
+
+    .icon-tooltip {
+      @apply absolute z-40 hidden justify-center rounded-lg bg-gray-100 px-2 py-2 text-xs italic group-hover:flex dark:bg-gray-600;
+    }
+
+    .info-tooltip {
+      @apply absolute origin-bottom scale-0 rounded-lg bg-indigo-900 bg-opacity-40 px-2 py-1 text-xs italic text-white opacity-0 transition-all duration-300 group-hover:translate-y-[-1.7rem] group-hover:scale-100 group-hover:opacity-100 dark:bg-green-900;
+    }
+
+    .admin-pages-main {
+      @apply right-0 top-0 flex w-[84%] flex-col items-center overflow-y-hidden sm:w-full;
+    }
+
+    .animated-button-text {
+      @apply absolute inset-0 flex h-full w-full -translate-x-full items-center justify-center  text-white duration-300 group-hover:translate-x-0;
+    }
+
+    .subheader {
+      @apply flex h-10 w-[80%] justify-between space-x-32 overflow-x-auto overflow-y-hidden px-4 transition-all duration-300 hover:h-full sm:w-auto sm:space-x-20 sm:px-0;
+    }
+
+    .subheader .level-two {
+      @apply my-1 min-w-[100px] text-sm;
+    }
+
+    .subheader ul {
+      @apply flex w-auto;
+    }
+
+    .subheader > ul {
+      @apply w-auto;
+    }
+
+    .subheader > ul > li > ul {
+      @apply absolute left-0 right-0 flex rounded-md text-left;
+    }
+    .subheader .level-one {
+      @apply mb-5 flex w-full cursor-pointer justify-center text-xs transition-all duration-200 hover:text-indigo-400 sm:text-sm;
+    }
+
+    @layer utilities {
+      .animation-delay-2000 {
+        animation-delay: 2s;
+      }
+      .animation-delay-4000 {
+        animation-delay: 4s;
+      }
+      /* Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+        @apply hidden;
+      }
+
+      .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+
+      .animated-button-text {
+        @apply absolute inset-0 flex h-full w-full -translate-x-full items-center justify-center duration-300 group-hover:translate-x-0;
+      }
+    }
+  }
+}

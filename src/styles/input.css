@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  input[type="text"],
+  textarea,
+  select {
+    @apply border-[1px] bg-gray-50 bg-opacity-10 text-gray-100 shadow-xl drop-shadow-sm transition-all duration-300 hover:border-themeDark hover:border-opacity-20 dark:border-themeLight dark:bg-primary dark:text-white;
+  }
+
+  .select {
+    @apply relative flex w-1/2 cursor-pointer flex-col items-start rounded-lg border-[1px];
+  }
+
+  .select .select-btn {
+    @apply w-full  rounded-lg bg-gray-400 bg-opacity-20 p-2 dark:bg-primary;
+  }
+
+  .select .select-content {
+    @apply absolute top-[101%] w-full rounded-lg border-[1px]  bg-gray-400 bg-opacity-20 p-2 dark:bg-primary;
+  }
+
+  .select .select-content .select-item {
+    @apply cursor-pointer rounded-lg px-2 py-[2px] transition-all duration-200 hover:bg-blue-400 hover:bg-opacity-40 dark:hover:bg-gray-800;
+  }
+}
