@@ -67,8 +67,7 @@ const Footer = () => {
         initial="hidden"
         variants={footerBottom}
         animate={controls}
-        transition={{ duration: 1, delay: 2 }}
-        className="w-site flex flex-col items-center justify-between border-t-[1px] border-t-blue-400 pt-6 md:flex-row"
+      className="w-site flex flex-col items-center justify-between border-t-[1px] border-t-blue-400 pt-6 md:flex-row"
       >
         <p className="text-center text-[18px] font-semibold leading-[27px] text-themeDarkest dark:text-white tracking-wider">
           Copyright Ⓒ 2022 PaintIt. All Rights Reserved.

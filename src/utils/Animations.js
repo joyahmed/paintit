@@ -53,7 +53,7 @@ export const footerTop = {
     opacity: 1,
     transition: {
       type: "spring",
-      stiffness: 20,
+      stiffness: 70,
       duration: 1,
     },
   },
@@ -62,14 +62,17 @@ export const footerBottom = {
   hidden: {
     y: 150,
     opacity: 0,
+    scale: 0,
   },
   show: {
     y: 0,
     opacity: 1,
+    scale: 1,
     transition: {
       type: "spring",
-      stiffness: 50,
-      duration: 1.5,
+      stiffness: 70,
+      duration: 2,
+      delay: 0.5,
     },
   },
 };
@@ -85,7 +88,7 @@ export const grow = {
 
     transition: {
       type: "spring",
-      stiffness: 20,
+      stiffness: 50,
       duration: 1,
       when: "beforeChildren",
     },
@@ -116,11 +119,6 @@ export const statsAnimation = {
   show: {
     opacity: 1,
     scale: 1,
-    transition: {
-      type: "spring",
-      stiffness: 20,
-      duration: Math.random() * 3,
-    },
   },
 };
 
@@ -152,7 +150,7 @@ export const pathVariant = {
   },
 };
 
-export const movePaintit = {
+export const moveRoofer = {
   hidden: {
     x: 0,
     y: 0,
@@ -319,22 +317,17 @@ export const ctaAnimation = {
 
 export const sectionRight = {
   hidden: {
-    x: "100vw",
+    x: 500,
   },
   show: {
-    x: "0vw",
-    transition: {
-      type: "spring",
-      stiffness: 100,
-      duration: 1,
-      when: "beforeChildren",
-    },
+    x: 0,
   },
 };
 
 export const sectionRightHalf = {
   hidden: {
     x: "50vw",
+    opacity: 0,
   },
   show: {
     x: "0vw",
@@ -349,16 +342,12 @@ export const sectionRightHalf = {
 
 export const sectionLeft = {
   hidden: {
-    x: "-100vw",
+    x: -500,
+    opacity: 0,
   },
   show: {
     x: 0,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-      duration: 1,
-      when: "beforeChildren",
-    },
+    opacity: 1,
   },
 };
 
@@ -483,12 +472,11 @@ export const aboutLeft = {
     rotate: 190,
   },
   show: {
-    rotate: [190, 150, 100, 50, 0],
-
+    rotate: [190, 0],
     transition: {
-      type: "spring",
-      stiffness: 100,
-      duration: 0.5,
+      // type: "spring",
+      // stiffness: 100,
+      duration: 1,
     },
   },
 };

@@ -47,23 +47,15 @@ const Home = () => {
 
       <Hero />
 
-      {/* <Divider /> */}
-
       <Stats />
 
       <Banner />
 
-      {/* <Divider /> */}
-
       <FeaturesSection />
-
-      <Divider />
 
       <ServicesSection />
 
       <ServicesItems />
-
-      <Divider />
 
       <Testimonials />
 
@@ -71,10 +63,10 @@ const Home = () => {
 
       <ClientsComponent />
 
-      <Divider />
       <CtaSection />
-      <MyMap />
-      <Divider />
+      <div className="flex h-full w-screen items-center justify-center px-3 sm:px-0">
+        <MyMap />
+      </div>
     </m.div>
   );
 };

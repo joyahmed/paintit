@@ -40,8 +40,7 @@ const ClientsComponent = ({ path }) => {
             variants={staggeredClients}
             animate={controls}
             transition={{
-              delay: itemIndex === 0 ? 1 : itemIndex * 1.5,
-              duration: 1,
+              duration: itemIndex === 0 ? 1 : itemIndex * 0.9,
             }}
             onMouseEnter={() => {
               setIndex(itemIndex);

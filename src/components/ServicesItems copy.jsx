@@ -25,7 +25,7 @@ const ServicesItems = ({ path }) => {
       ref={element}
       className={`${
         styles.flexCenter
-      } relative min-h-screen w-screen  px-2 sm:px-0 ${
+      } w-site relative h-auto sm:min-h-screen px-2  sm:px-0 ${
         path === "page" ? "" : "px-2"
       }`}
     >
@@ -35,24 +35,23 @@ const ServicesItems = ({ path }) => {
         variants={sectionLeft}
         animate={controls}
         transition={{ duration: 1 }}
-        className="w-site flex flex-wrap"
+        className="w-site flex flex-wrap min-h-screen"
       >
         {paintitServices.map((item) => (
           <div
             key={item.title}
-            className={`${styles.flexCenter} w-site flex-col sm:w-1/2`}
+            className={`${styles.flexCenter} w-full flex-col sm:w-1/2 `}
           >
             <m.div
-              ref={element}
-              initial="hidden"
-              variants={servicesItemsAnimation}
-              animate={controls}
-              transition={{ duration: 1 }}
+              // ref={element}
+              // initial="hidden"
+              // variants={servicesItemsAnimation}
+              // animate={controls}
               className={`${
                 mounted && currentTheme === "dark"
                   ? "feedback-card"
                   : "card-light"
-              } group my-5 rounded-lg bg-blue-200 bg-opacity-30 px-5 py-5  dark:bg-gray-900 dark:bg-opacity-30 sm:mx-10`}
+              } group my-10 rounded-lg bg-blue-200 bg-opacity-30 px-5 py-5  dark:bg-gray-900 dark:bg-opacity-30 sm:mx-10`}
             >
               <div className="flex items-center justify-start px-4 sm:w-[100%] ">
                 <Image

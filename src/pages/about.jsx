@@ -70,7 +70,7 @@ const Features = () => {
             <m.div
               ref={element}
               initial="hidden"
-              // variants={aboutLeft}
+              variants={aboutLeft}
               animate={controls}
               className="mt-10 flex w-full items-center justify-center sm:w-1/2"
             >
@@ -142,7 +142,7 @@ const Features = () => {
       </div>
 
       <div
-        className={`${styles.flexCenter} mb-16 mt-40 h-full w-screen flex-col space-y-10 dark:text-white sm:mt-10 sm:px-0`}
+        className={`${styles.flexCenter} mb-16 h-full w-screen flex-col space-y-10 dark:text-white sm:mt-10 sm:px-0`}
       >
         <h1 className="heading-gradient-light text-center text-[17px] font-semibold leading-[1] dark:text-white sm:text-left">
           We are certified and award winning roofing contractors

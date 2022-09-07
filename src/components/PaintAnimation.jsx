@@ -42,8 +42,8 @@ const PaintAnimation = ({ path }) => {
           variants={svgVariant}
           initial="hidden"
           animate="visible"
-          width={`${path !== 'footer' ? 400 : 150}`}
-          height={`${path !== 'footer' ? 400 : 150}`}
+          width={`${path !== 'footer' ? 350 : 150}`}
+          height={`${path !== 'footer' ? 350 : 150}`}
           viewBox="0 0 802 560"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

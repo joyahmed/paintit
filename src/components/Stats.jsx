@@ -15,7 +15,7 @@ const Stats = () => {
   return (
     <section
       ref={element}
-      className={`my-10 flex min-h-screen w-screen items-center justify-center  `}
+      className={`w-site my-10 flex min-h-screen items-center justify-center`}
     >
       <m.div
         ref={element}
@@ -32,6 +32,11 @@ const Stats = () => {
               initial="hidden"
               variants={statsAnimation}
               animate={controls}
+              transition={{
+                type: "spring",
+                stiffness: 20,
+                duration: index == 0 ? 1 : index * 0.9,
+              }}
               key={stat.id}
               className={`group my-5 flex h-[20rem] w-full flex-col items-center justify-end overflow-hidden rounded-[15px] px-3  shadow-2xl hover:rounded-[25px] group-hover:justify-center xl:h-[30rem]
               `}

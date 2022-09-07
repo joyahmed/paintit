@@ -72,7 +72,7 @@ const Slider = () => {
                 className={`absolute flex h-full w-screen ${
                   autoScroll && "animate-slider"
                 } items-center justify-center
-              dark:bg-gray-900 bg-red-900 bg-blend-multiply bg-opacity-50  duration-1000 ease-in-out dark:bg-opacity-50 dark:bg-blend-multiply
+              bg-red-900 bg-opacity-50 bg-blend-multiply duration-1000  ease-in-out dark:bg-gray-900 dark:bg-opacity-50 dark:bg-blend-multiply
                `}
                 style={{
                   backgroundImage: `url(${slide.image})`,
@@ -83,7 +83,7 @@ const Slider = () => {
                 }}
               ></div>
 
-              <div className="absolute flex h-screen w-screen items-center justify-center self-center shadow-xl">
+              <div className="hidden h-screen w-screen items-center justify-center self-center shadow-xl sm:absolute sm:flex">
                 <div className="w-site flex h-[80%] shadow-xl"></div>
               </div>
 
@@ -138,14 +138,14 @@ const ContentLeft = ({ slide, currentTheme }) => {
         className={`my-auto flex w-full flex-col items-start justify-start text-left sm:pl-4 xl:pl-20
       `}
       >
-        <div className="animate-slider-top-text">
+        <div className="mt-14 animate-slider-top-text sm:mt-0">
           <h3 className={`text-[22px] font-bold text-themeLight`}>
             {slide.text1}
           </h3>
           <h1
-            className={`text-gradient-dark mt-4
-            mb-5 h-full text-[50px] font-bold
-            leading-[60px] ss:text-[68px] ss:leading-[85px] sm:mb-6
+            className={`text-gradient-dark mb-3
+            h-full text-[50px] font-bold leading-[60px]
+            ss:text-[68px] ss:leading-[85px] sm:mt-4 sm:mb-6
            sm:whitespace-pre-line`}
           >
             {slide.text2}
@@ -153,7 +153,7 @@ const ContentLeft = ({ slide, currentTheme }) => {
         </div>
         <div className="animate-slider-bottom-text">
           <h2
-            className={`mb-5 text-[20px] text-white dark:text-gray-400 sm:whitespace-pre-line`}
+            className={`mb-2 text-[20px] text-white dark:text-gray-400 sm:mb-5 sm:whitespace-pre-line`}
           >
             {slide.text3}
           </h2>
